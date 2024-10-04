@@ -1,0 +1,89 @@
+BreadcrumbsNextJS-Fetch-GoogleSheet
+This project provides a simple way to fetch data from a Google Sheet and display it on a Next.js application. Using Google Sheets as a CMS, you can dynamically update the content of your website without needing to redeploy your application. The data is fetched using the Google Sheets API, processed in Next.js, and displayed in a breadcrumb-style navigation UI.
+
+Features
+Google Sheets Integration: Fetch data directly from Google Sheets using the Sheets API.
+Next.js: Server-side rendering for fast and dynamic content updates.
+Breadcrumbs Navigation: Display hierarchical data in a breadcrumb format.
+API Fetching: Uses Next.js API routes to fetch data from the Google Sheets API.
+Prerequisites
+Before starting, ensure you have the following:
+
+Node.js installed on your machine.
+A Google Cloud project with the Sheets API enabled.
+Access to a Google Sheet (with public or authenticated access).
+Google API credentials (OAuth2 or API key).
+Installation
+Clone the Repository:
+
+bash
+Copiar código
+git clone https://github.com/yourusername/BreadcrumbsNextJS-Fetch-GoogleSheet.git
+Navigate to the Project Directory:
+
+bash
+Copiar código
+cd BreadcrumbsNextJS-Fetch-GoogleSheet
+Install Dependencies:
+
+bash
+Copiar código
+npm install
+Configure Google Sheets API Credentials:
+
+Obtain your credentials from the Google Cloud Console and add them to an .env.local file in the project root.
+Example .env.local file:
+
+bash
+Copiar código
+GOOGLE_SHEET_ID=your-google-sheet-id
+GOOGLE_API_KEY=your-google-api-key
+Usage
+Fetching Data: The data is fetched from a Google Sheet using an API route in Next.js. You can configure the GOOGLE_SHEET_ID and API endpoint to target your specific sheet.
+
+Start the Development Server:
+
+bash
+Copiar código
+npm run dev
+Your application will be available at http://localhost:3000.
+
+Displaying Data in Breadcrumb Format: The app fetches data and dynamically builds a breadcrumb-style navigation UI. Customize the data parsing logic as needed based on your sheet’s structure.
+
+Project Structure
+/pages/index.js: The homepage of your Next.js app.
+/pages/api/fetchSheet.js: The API route used to fetch data from the Google Sheet.
+/components/Breadcrumb.js: The breadcrumb component that renders the fetched data hierarchically.
+/utils/sheetAPI.js: Contains utility functions for fetching and parsing Google Sheet data.
+Deployment
+Build for Production:
+
+bash
+Copiar código
+npm run build
+Run the Production Server:
+
+bash
+Copiar código
+npm start
+Deploy to Vercel:
+This Next.js app can easily be deployed to Vercel. Simply connect your GitHub repository to Vercel, and it will automatically handle the deployment.
+
+Troubleshooting
+API Authentication Errors: Ensure that your .env.local contains the correct API key or OAuth credentials.
+Google Sheets Permissions: Make sure your Google Sheet is accessible (either public or shared with the appropriate credentials).
+404 Errors for Breadcrumb Data: Check the structure of your Google Sheet and ensure the correct parsing logic is implemented in sheetAPI.js.
+License
+This project is licensed under the MIT License. See the LICENSE file for more details.
+
+Credits
+Next.js
+Google Sheets API
+This README.md provides clear instructions and outlines the key features of your project. You can adjust the content depending on any specific nuances or setup requirements.
+
+
+
+
+
+
+4o
